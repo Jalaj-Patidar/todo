@@ -75,7 +75,12 @@
 .filters{
     justify-content: left;
 }
-
+.sort{
+    justify-content: left;
+}
+.search{
+    justify-content: left;
+}
 #todolist{
     width: 70%;
     margin: 20px auto;
