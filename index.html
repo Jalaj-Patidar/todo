@@ -47,22 +47,26 @@
                     <option value="high">High</option>
                 </select>
                 <button class="adding_task_menu" id="applyFilterBtn" style="background-color: rgb(36, 161, 161);">Apply Filter</button>
-                <label class="adding_task_menu" for="sortOptions">Sort by:</label>
-                <select class="adding_task_menu" id="sortOptions">
-                    <option value="dueDate">Due Date</option>
-                    <option value="priority">Priority</option>
-                    <option value="category">Category</option>
-                    <option value="task">Task Name</option>
-                </select>
-                <button class="adding_task_menu" id="sortBtn" style="background-color: rgb(36, 161, 161);">Sort</button>
+                <div class="sort">
+                    <label class="adding_task_menu" for="sortOptions">Sort by:</label>
+                    <select class="adding_task_menu" id="sortOptions">
+                        <option value="dueDate">Due Date</option>
+                        <option value="priority">Priority</option>
+                        <option value="category">Category</option>
+                        <option value="task">Task Name</option>
+                    </select>
+                    <button class="adding_task_menu" id="sortBtn" style="background-color: rgb(36, 161, 161);">Sort</button>
+                </div>
                 <label class="adding_task_menu" for="statusFilter">View Backlogs:</label>
                 <select class="adding_task_menu" id="statusFilter">
                     <option value="all">All</option>
                     <option value="pending">Pending</option>
                 </select>
                 <button class="adding_task_menu" id="applyStatusFilterBtn" style="background-color: rgb(36, 161, 161);">Apply Status Filter</button>
-                <input class="adding_task_menu" type="text" id="searchInput" placeholder="Search">
-                <button class="adding_task_menu" id="searchBtn" style="background-color: rgb(36, 161, 161);">Search</button>
+                <div class="search">
+                    <input class="adding_task_menu" type="text" id="searchInput" placeholder="Search">
+                    <button class="adding_task_menu" id="searchBtn" style="background-color: rgb(36, 161, 161);">Search</button>
+                </div>
                 <input class="adding_task_menu" type="text" id="tagsSearchInput" placeholder="Search task by tags">
                 <button class="adding_task_menu" id="tagsSearchBtn" style="background-color: rgb(36, 161, 161);">Search by Tags</button>
             </div>
