@@ -12,12 +12,63 @@
             <h2>To-Do list  <img src="./images/icon.png" alt=""></h2>
             <div class="form">
                 <input type="text" id="inp" placeholder="Add your task">
+                <input type="text" id="tagsInput" placeholder="Add tags separated by commas">
                 <button id="btn">Add</button>
             </div>
-    
-            <ul id="todolist">
-                
-            </ul>
+            <input type="date" id="dueDate"> 
+            <select class="adding_task_menu" id="categorySelect">
+                <option value="Personal">Personal</option>
+                <option value="Work">Work</option>
+                <option value="Shopping">Shopping</option>
+                <!-- Add more categories as needed -->
+            </select>
+            <select class="adding_task_menu" id="prioritySelect">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+            <div class="filters">
+                <label class="adding_task_menu" for="filterDueDateFrom">Due Date From:</label>
+                <input class="adding_task_menu" type="date" id="filterDueDateFrom">
+                <label class="adding_task_menu" for="filterDueDateTo">Due Date To:</label>
+                <input class="adding_task_menu" type="date" id="filterDueDateTo">
+                <select class="adding_task_menu" id="filterCategory">
+                    <option value="all">All</option>
+                    <option value="Personal">Personal</option>
+                    <option value="Work">Work</option>
+                    <option value="Shopping">Shopping</option>
+                    <!-- Add more categories as needed -->
+                </select>
+                <label class="adding_task_menu" for="filterPriority">Priority:</label>
+                <select class="adding_task_menu" id="filterPriority">
+                    <option value="all">All</option>
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+                <button class="adding_task_menu" id="applyFilterBtn" style="background-color: rgb(36, 161, 161);">Apply Filter</button>
+                <label class="adding_task_menu" for="sortOptions">Sort by:</label>
+                <select class="adding_task_menu" id="sortOptions">
+                    <option value="dueDate">Due Date</option>
+                    <option value="priority">Priority</option>
+                    <option value="category">Category</option>
+                    <option value="task">Task Name</option>
+                </select>
+                <button class="adding_task_menu" id="sortBtn" style="background-color: rgb(36, 161, 161);">Sort</button>
+                <label class="adding_task_menu" for="statusFilter">View Backlogs:</label>
+                <select class="adding_task_menu" id="statusFilter">
+                    <option value="all">All</option>
+                    <option value="pending">Pending</option>
+                </select>
+                <button class="adding_task_menu" id="applyStatusFilterBtn" style="background-color: rgb(36, 161, 161);">Apply Status Filter</button>
+                <input class="adding_task_menu" type="text" id="searchInput" placeholder="Search">
+                <button class="adding_task_menu" id="searchBtn" style="background-color: rgb(36, 161, 161);">Search</button>
+                <input class="adding_task_menu" type="text" id="tagsSearchInput" placeholder="Search task by tags">
+                <button class="adding_task_menu" id="tagsSearchBtn" style="background-color: rgb(36, 161, 161);">Search by Tags</button>
+            </div>
+            <div class="todo-list" id="todolist">
+            
+            </div>
         </div>
     </div>
 
