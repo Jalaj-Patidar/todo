@@ -6,6 +6,14 @@ var todolist = document.getElementById("todolist");
 var dueDateInput = document.getElementById("dueDate");
 var prioritySelect = document.getElementById("prioritySelect");
 
+window.addEventListener("DOMContentLoaded", function () {
+  const savedList = localStorage.getItem("todoList");
+  if (savedList) {
+    list = JSON.parse(savedList);
+    showList();
+  }
+});
+
 document.getElementById("btn").addEventListener("click", function () {
   const taskName = inp.value;
   const category = document.getElementById("categorySelect").value;
@@ -27,6 +35,7 @@ document.getElementById("btn").addEventListener("click", function () {
     inp.value = "";
     tags.innerHTML = "";
     showList();
+    saveListToLocalStorage();
   }
 });
 
@@ -316,7 +325,7 @@ function showList() {
       item.priority +
       "</span>" +
       "<span style='margin-left: 10px;'>Tags: " +
-      item.tags.join(", ") +
+      item?.tags?.join(",") +
       "</span>" +
       "<a onClick='editItem(" +
       i +
@@ -331,12 +340,12 @@ function showList() {
 function deleteItem(i) {
   list.splice(i, 1);
   showList();
+  saveListToLocalStorage();
 }
 
 function editItem(i) {
   var newValue = prompt("please insert you new value");
   list.splice(i, 1, newValue);
-  showList();
 }
 function isSimilarWord(word, searchTerm) {
   return word.includes(searchTerm);
@@ -347,5 +356,6 @@ function hasTags(taskTags, searchTags) {
     .map((tag) => tag.trim().toLowerCase());
   return searchTagArray.some((tag) => taskTags.includes(tag));
 }
-
-    
+function saveListToLocalStorage() {
+  localStorage.setItem("todoList", JSON.stringify(list));
+}
